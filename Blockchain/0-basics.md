@@ -20,11 +20,20 @@ A **public append-only data structure**
 informal, not focus of this class.    
 
 - How are blocks added to chain:  
-
+1. A,B,C sign transactions using their secret keys
+2. They sign their transactions to the blockchain network which is a collections of miniers
+3. gosip protocol replicates and propogates all these transactions throughout the network
+4. By leader election mechanism, a miner gets elected to create the next block.
+5. The leader takes the current pending transaction, then he posts this block onto blockchain, gets Ethereum reward.
+6. The other miniers look at that block and they verify that block is valid.  
 
 # compute layer (blockchain computer)
-transparency  
-public verifiability  
+DAPP logic is encoded in a program that runs on blockchain.  
+- Rules are enforced by a public program (public source code)
+  - transparency : no single trusted 3rd party 
+DAPP program is executed by parties who create new blocks.
+- public verifiability : everyone can verify state transactions
+
 
 # App layer : DApps
 DApps run on blockchain computer.  
