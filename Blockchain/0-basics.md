@@ -1,23 +1,24 @@
 # Terminology
-blockchain : a blockchain provides coordination between many parties, when there is no single trusted party.  
+- blockchain : **a blockchain provides coordination between many parties, when there is no single trusted party.**  
+  - If there is trusted party, no need for blockchain. 
 
-blockchain layer:  
+
+# blockchain layer:  
 ```
 user facing tools (cloud server)
 application layer (Dapps, smart contracts)
 compute layer (blockchain computer)
 consensus layer
 ```
+![DeFi layer](/img/DeFi-layer.png)
 
-
-# consensus layer
+# Layer 1 : consensus layer
 A **public append-only data structure**
 - persistence : once added, data can never be removed （achieved by replication).  
 - consensus : 共识 all honest participants have same data.    
 - liveness : honest participants can add new transactions.    
 - open : anyone can add data. Not just authorized participants.    
 
-informal, not focus of this class.    
 
 - How are blocks added to chain:  
 1. A,B,C sign transactions using their secret keys
@@ -27,7 +28,10 @@ informal, not focus of this class.
 5. The leader takes the current pending transaction, then he posts this block onto blockchain, gets Ethereum reward.
 6. The other miniers look at that block and they verify that block is valid.  
 
-# compute layer (blockchain computer)
+
+![blockchain](/img/blockchain.png)
+
+# Layer 2 : compute layer (blockchain computer)
 DAPP logic is encoded in a program that runs on blockchain.  
 - Rules are enforced by a public program (public source code)
   - transparency : no single trusted 3rd party 
@@ -35,17 +39,12 @@ DAPP program is executed by parties who create new blocks.
 - public verifiability : everyone can verify state transactions
 
 
-# App layer : DApps
+# Layer 3 : App layer : DApps
 DApps run on blockchain computer.  
 
-# UI layer : user facing servers  
+# Layer 4 : UI layer : user facing servers  
+![DeFi ecosystem](/img/DeFi-ecosystem.png)
 
-
-Compound  
-
-Uniswap  
-
-Custodial services  
 
 # Cryptography background  
 - H is CRH : hash function is a collusion resistant hash function H.  

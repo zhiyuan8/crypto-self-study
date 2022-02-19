@@ -4,6 +4,9 @@ centralized:
 2. can sensor transactions
 3. take fees
 
+# smart contract
+user-defined programs running on top of a blockchain    
+contracts : code -> storage  
 
 # DeFi Youtube
 [Decentralized Finance: The Future of Currencies](https://www.youtube.com/watch?v=9_Ttqyc804M&ab_channel=TheRichDadChannel)  
