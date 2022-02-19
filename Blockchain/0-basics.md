@@ -31,6 +31,8 @@ A **public append-only data structure**
 
 ![blockchain](/img/blockchain.png)
 
+![blockchain](/img/blockchain2.png)
+
 # Layer 2 : compute layer (blockchain computer)
 DAPP logic is encoded in a program that runs on blockchain.  
 - Rules are enforced by a public program (public source code)
