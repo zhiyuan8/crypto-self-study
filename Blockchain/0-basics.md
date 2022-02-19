@@ -48,6 +48,7 @@ DApps run on blockchain computer.
 
 # Cryptography background  
 - H is CRH : hash function is a collusion resistant hash function H.  
+- instead of writing transaction S to the blockchain, can just write commit(S) to chain.   
 ```
 Example : SHA-256 { x : len(x)< 2^64 bytes } -> { 0 , 1 } ^ 256
 ```
@@ -56,7 +57,26 @@ Example : SHA-256 { x : len(x)< 2^64 bytes } -> { 0 , 1 } ^ 256
   - committing to a list (of transactions) : use "Merkle tree", a tree of hashes
   - 32 byte root
 
+
+- verify one trasaction 
+  - Alice has a large file m, she publishes h = H(m) (32bytes)  
+  - Bob has h, later Alice sends large file m' s.t. H(m') = h. 
+  - H is CRH (collision-resistent hashing). Bob is convinced that ```m = m'```   
+  - ```h = H(m)``` is a binding commitment to m. Otherwise, h may leakage information about m.  
+
+
+- verify a list of trasaction  
+  - Alice has S = (m1,m2, ... , mn)  
+  - Bob to prove S[4] = m4, he needs:  
+```
+y2 = H(m3,m4)  
+y5 = H(y1,y2)  
+h' = H(y5,y6)  
+accept if h = h'  
+```
+
 ![Merkle tree](/img/Merkle_tree.png)
+
 
 # digital signature
 - discrete-log signatures
@@ -66,6 +86,7 @@ Example : SHA-256 { x : len(x)< 2^64 bytes } -> { 0 , 1 } ^ 256
   - 48 bytes, aggregtable, easy threshold
   - Ethereum 2.0
 - SNARK proof
+
 
 # scaling blockchain
 transaction rate:
