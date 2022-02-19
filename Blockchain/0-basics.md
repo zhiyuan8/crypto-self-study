@@ -89,6 +89,8 @@ accept if h = h'
   - Ethereum 2.0
 - SNARK proof
 
+![digital signature](/img/digital-signature.png)
+
 
 # scaling blockchain
 transaction rate:
