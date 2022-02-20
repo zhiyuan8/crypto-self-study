@@ -13,5 +13,8 @@
 * [Etherum](Etherum/README.md)
   * [Basics](Etherum/0-basics.md)
 
+* [Messari](Messari/README.md)
+  * [Basics](Messari/0-basics.md)
+
 * [Terminology](terminology/README.md)
   * [Basics](terminology/0-basics.md)
