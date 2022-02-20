@@ -149,6 +149,15 @@ Solidity compatibility : coordinator can produce a SNARK proof for the execution
   
 ## 4.3 Data availability : zkSync vs zkPorter
 If coordinator dies, new coordinator needs all current account information.   
+- zkSync : store all Tx data on blockchain (Ethereum).
+  - higher gas fee, good for high value assets.
+- zkPorter : store all Tx data on a new blockchain
 
+# Interoperability & Composability
+- Interoperability : Move assets from one chain to another, because a user owns funds / assets on one blockchain system. 
+  - via bridges and pegged coin   
+  - cross-chain protocols: XCMP, IBC...   
+- Composability : enable a DAPP on one blockchain to call a DAPP on another.  
+- federated bridge
 
 
