@@ -48,7 +48,10 @@ DApps run on blockchain computer.
 ![DeFi ecosystem](/img/DeFi-ecosystem.png)
 
 
-# Cryptography background  
+# Important cryptographic primitives
+
+
+## 1. Collision resistant hash functions and Merkle trees
 - H is CRH : hash function is a collusion resistant hash function H.  
 - instead of writing transaction S to the blockchain, can just write commit(S) to chain.   
 ```
@@ -80,33 +83,21 @@ accept if h = h'
 ![Merkle tree](/img/Merkle_tree.png)
 
 
-# digital signature
+## 2. digital signatures
+To authorize and prove a transaction.  
 - discrete-log signatures
   - short sigs (48 or 64 bytes) and public keys (32 bytes)
   - Bitcoin, Ethereum
 - BLS signatures
   - 48 bytes, aggregtable, easy threshold
   - Ethereum 2.0
-- SNARK proof
 
 ![digital signature](/img/digital-signature.png)
 
 
-# scaling blockchain
-transaction rate:
-- Bitcoin 5 Tx / sec , Ethereum 20 Tx / sec  
-- Visa (centralized) network 24,000 Tx / sec  
-- gas price / Tx fees : $2 ~ $60 / Tx  
-
-
-scaling approaches:
-- faster concensus
-- payment channels : most Tx are off chain peer-to-peer
-- Layer 2 approaches : zxRollup , Optimistic Rollup
-- Sidechains : Polygon and others
-
-# scaling Etherum using Rollup
-main tool : SNARK  
+## 3. zk-SNARK 零知识简洁的非交互知识论证  
+zk-SNARK stands for : 'Zero-Knowledge Succinct Non-Interactive Argument of Knowledge' 零知识简洁的非交互知识论证   
+Used for scaling and privacy.  
 ```
 C : a program that always terminates in <= B steps
 x : public input to C
@@ -115,6 +106,28 @@ prover (C,x,w) - short proof pi -> (C,x)
 ```
 main point : verifier's runtime is *much less* than running C.   
 
+
+# 4. scaling blockchain
+- blockchain transaction rate:
+  - Bitcoin 5 Tx / sec , Ethereum 20 Tx / sec  
+  - Visa (centralized) network 24,000 Tx / sec  
+  - gas price / Tx fees : $2 ~ $60 / Tx  
+
+- scaling approaches:
+  - faster concensus, mordern blockchains (Solana, polkadot)
+  - payment channels : most Tx are off chain peer-to-peer (Lightening)
+  - Layer 2 approaches : 
+    - batch many Tx into a single Tx
+    - **zxRollup** , **Optimistic Rollup**
+  - Sidechains : **Polygon** and others
+
+- HTLC logic : hashed timelock contract
+  - two ways to close channel
+
+
+## 4.1 ZK Rollup
+standard L1 chains : **every** miner must verify **every** posted Tx.   
+Ethereum 1000X processing time improve : SNARK proof  
 - zkrollup
   - transactions within a Rollup system is easy
   - moving funds in and out of Rollup system (L1<=> L2) is more expensive
@@ -122,8 +135,20 @@ main point : verifier's runtime is *much less* than running C.
   - moving funds from one Rollup system to another (L2 <=> L2)
     - either via L1 network (expensive) or via a direct L2 <=> L2 bridge (cheap)
 
-zkEVM
+L1 Ethereum to L2 zkRollup  
+zkEVM. 
+Solidity compatibility : coordinator can produce a SNARK proof for the execution of a short solidity program.  
+- easy to migrate a DAPP from **L1 Ethereum to L2 zkRollup**
+- reduce Tx fees and increase Tx rate compared to L1
 
+
+## 4.2 Optimistic Rollup  
+- same principal as zkRollup, but no SNARK proofs. less work for server.  
+- Instead, coordinator posts Tx data on chain without a proof, then give a few days for validators to complain
+  - If a posted Tx is invalid : anyone can submit a **fraud proof** and win a reward. Rollup server gets slashed.  
+  
+## 4.3 Data availability : zkSync vs zkPorter
+If coordinator dies, new coordinator needs all current account information.   
 
 
 
