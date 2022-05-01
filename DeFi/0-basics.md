@@ -12,11 +12,6 @@ Miner Extractable Value (MEV)
 Liquidation 清算
 De-leveraging 去杠杆化。在期货市场上，交易者利用债务或杠杆来交易更大的资本。例如，币安允许交易员使用初始资本的125倍进行交易。如果用户有1000美元，用户最多可以用125000美元进行交易。  
 
-
-# CeFi
-Banks, securities/insurance/trust investment/fund management companies, etc. (title 31 of the United States Code)
-
-
 # DeFi
 DeFi : **Financial infrastructure as an open , permissionless, and highly interoperable protocol stack built on public smart constract platforms.**  
 - DeFi
@@ -39,14 +34,6 @@ DeFi : **Financial infrastructure as an open , permissionless, and highly intero
     - E.g., Uniswap vs. CEX
   - Atomic composability
     - E.g., Flash loan 
-
-# DeFi vs CeFi
-| CeFi | DeFi |
-| -- | -- |
-| Permissioned | Permissionless |
-| Custodial | Non-custodial |
-| Centralized trust & governance | Decentralized trust & governance, Trustless |
-| Real identity | privacy |
 
 
 # DeFi stack
