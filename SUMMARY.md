@@ -18,3 +18,5 @@
 
 * [Terminology](terminology/README.md)
   * [Basics](terminology/0-basics.md)
+
+* [DeFi-MOOC-UCB](DeFi-MOOC-UCB/README.md)
