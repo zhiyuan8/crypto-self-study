@@ -1,3 +1,22 @@
+[DefiMooc中文翻译组](https://space.bilibili.com/1522784883)    
+
+# DeFi Advantage   
+1. Efficiency  
+   - Removing rent-seeking intermediaries 去除了竟租行为的中介机构   
+2.  Open finance and universal accessibility
+  - Inclusive 开放包容的  
+3. Transparency and public verifiability 开放包容和公众可检查性  
+  - Anyone can inspect the smart contract code and verify the execution and state of the system
+4. Self custody and censorship resistant 自我托管和抵制审查  
+5. Automation & programmability
+6. Composability and interoperability 可组合性和交互操作性  
+7. Innovation
+  - DeFi applications often are much simpler and faster to develop than CeFi counterparts  
+§ E.g., Uniswap vs. CEX
+§ Atomic composability  
+§ E.g., Flash loan
+
+
 # Terminology
 Stablecoin : A stablecoin is a class of cryptocurrencies that attempt to offer price stability and are backed by a reserve asset.  
 - how to create stablecoin:
