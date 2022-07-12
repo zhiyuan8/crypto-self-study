@@ -4,6 +4,16 @@ centralized:
 2. can sensor transactions
 3. take fees
 
+# DeFi key categories
+1. stablecoins  
+2. Lending and Borrowing  
+3. Exchanges
+4. Derivatives : A derivative is a contract whose value is derived from another underlying asset such as stocks, commodities, currencies, indexes, bonds, or interest rates.
+5. Fund Management : Fund management is the process of overseeing your assets and managing its cash flow to generate a return on your investments.  
+6. Lottery : Putting a DeFi spin onto lotteries allow for the removal of custodianship of the pooled capital unto a smart contract on the Ethereum Blockchain.  
+7. 
+
+
 # smart contract
 user-defined programs running on top of a blockchain    
 contracts : code -> storage  

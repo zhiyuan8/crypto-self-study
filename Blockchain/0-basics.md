@@ -42,7 +42,8 @@ DAPP program is executed by parties who create new blocks.
 
 
 # Layer 3 : App layer : DApps
-DApps run on blockchain computer.  
+DApps run on blockchain computer.    
+Dapps are interfaces that interact with the blockchain through the use of smart contracts. From the front, Dapps look and behave like regular web and mobile applications, except that they interact with a blockchain and in different ways.  
 
 # Layer 4 : UI layer : user facing servers  
 ![DeFi ecosystem](/img/DeFi-ecosystem.png)
